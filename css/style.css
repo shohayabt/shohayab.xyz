@@ -22,11 +22,29 @@ h1,h2{
 section{
     padding: 40px 9%;
 }
+.button{
+    background-color: var(--buttonColor);
+    padding: 10px 20px;
+    border-radius: 5px;
+    outline: 0;
+    border: 2px solid var(--buttonColor);
+    color: var(--white);
+    font-family: var(--headlineText);
+    margin: 10px 0px;
+    transition: all linear 0.2s;
+}
+.button:hover{
+    background: transparent;
+    border: 2px solid var(--white);
+    border-radius: 0px;
+    color: var(--white);
+}
+/* SOME USEFUL VAR IN CSS STRT FORM HERE  */
 :root{
     --mainColor:#e23e38;
     --black:black;
     --buttonColor:#e23e38;
-    --shadow:rgba(0, 0, 0, 0.7);
+    --shadow:rgba(0, 0, 0, 0.6);
     --white:white;
     /* FONT ROOT CSS START HERE */
     --headlineText:'Oswald', sans-serif;
@@ -46,16 +64,21 @@ section{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 9999;
 }
 #header .logo{
     font-size: 30px;
     font-weight: 700;
     font-family: var(--headlineText);
-    color: var(--mainColor);
+    color: var(--white);
     text-transform: uppercase;
 }
 #header .logo i{
     color: var(--white);
+    margin: 0px 6px;
+}
+#header .logo span{
+    color: var(--mainColor) !important;
 }
 #header .main-menu ul{
     display: flex;
@@ -94,8 +117,8 @@ section{
 /* HEADER SECTION END HERE  */
 /* HERO SECTION START FROM HERE  */
 #hero-section{
-    padding: 300px 150px;
-    background: url(../images/background-image-01.jpg);
+    height: 100vh;
+    background: url(../images/background-image-00.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -103,6 +126,18 @@ section{
     justify-content: center;
     align-items: center;
     background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+}
+#hero-section::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--shadow);
+    z-index: -1;
 }
 #hero-section .hero-information{
     width: 600px;
@@ -121,5 +156,13 @@ section{
     color: var(--mainColor);
     font-family: var(--headlineText);
     font-weight: 700;
+}
+#hero-section .hero-information p{
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--articleText);
+    text-align: center;
+    text-transform: uppercase;
 }
 /* HERO SECTION END HERE */
