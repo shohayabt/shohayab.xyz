@@ -11,9 +11,13 @@ html{
 a,a:hover{
     color: black;
     text-decoration: none;
+    text-transform: uppercase;
 }
 ul,ol{
     list-style: none;
+}
+h1,h2{
+    text-transform: uppercase;
 }
 section{
     padding: 40px 9%;
@@ -88,3 +92,34 @@ section{
     width: 100%;
 }
 /* HEADER SECTION END HERE  */
+/* HERO SECTION START FROM HERE  */
+#hero-section{
+    padding: 300px 150px;
+    background: url(../images/background-image-01.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+}
+#hero-section .hero-information{
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#hero-section .hero-information h2{
+    font-family: var(--headlineText);
+    font-size: 20px;
+    color: var(--white);
+}
+#hero-section .hero-information h1{
+    font-size: 40px;
+    color: var(--mainColor);
+    font-family: var(--headlineText);
+    font-weight: 700;
+}
+/* HERO SECTION END HERE */

@@ -1,4 +1,4 @@
-$('.background-slider').slick({
-    rtl: true
-  });
+// $('..background-slider').slick({
+//     rtl: true
+//   });
       
