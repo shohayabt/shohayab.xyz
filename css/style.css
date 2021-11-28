@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Poppins&display=swap');
+/* COMMON CSS START FROM HERE  */
 *{
     margin: 0;
     padding: 0;
@@ -17,5 +19,72 @@ section{
     padding: 40px 9%;
 }
 :root{
-    --mainColor: e;
+    --mainColor:#e23e38;
+    --black:black;
+    --buttonColor:#e23e38;
+    --shadow:rgba(0, 0, 0, 0.7);
+    --white:white;
+    /* FONT ROOT CSS START HERE */
+    --headlineText:'Oswald', sans-serif;
+    --articleText:'Poppins', sans-serif;
+    /* FONT ROOT CSS END HERE */
 }
+/* COMMON CSS END HERE */
+
+/* HEADER SECTION START FROM HERE  */
+#header{
+    width: 100%;
+    height: 60px;
+    padding: 0px 9%;
+    position: absolute;
+    top: 30px;
+    background: var(--shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#header .logo{
+    font-size: 30px;
+    font-weight: 700;
+    font-family: var(--headlineText);
+    color: var(--mainColor);
+    text-transform: uppercase;
+}
+#header .logo i{
+    color: var(--white);
+}
+#header .main-menu ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header .main-menu ul li{
+    line-height: 60px;
+}
+#header .main-menu ul li a{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--headlineText);
+    color: var(--white);
+    position: relative;
+    padding: 0px 20px;
+}
+#header .main-menu ul li a::after{
+    position: absolute;
+    content: '';
+    background: var(--mainColor);
+    left:0;
+    bottom: 0;
+    height: 3px;
+    width: 0px;
+    transition: all linear 0.3s;
+}
+#header .main-menu li:hover a{
+    background: var(--white);
+    color: var(--black);
+}
+#header .main-menu li:hover a::after{
+    width: 100%;
+}
+/* HEADER SECTION END HERE  */
