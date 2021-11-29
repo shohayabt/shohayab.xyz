@@ -20,11 +20,11 @@
         padding: 35px 6%;
     }
     #hero-section{
-        padding: 150px 0px 100px;
+        padding: 150px 6% 100px;
     }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and Down)*/
+/* Small devices (portrait tablets and large phones, 768px and Down)*/
 
 @media only screen and (max-width: 768px) {
     .main-menu{
@@ -52,5 +52,43 @@
     }
     .menuActiveResponsive ul li a{
         display: block !important;
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and Down) */
+
+@media only screen and (max-width: 600px) {
+    section{
+        padding: 20px 5%;
+    }
+    .button{
+        padding: 8px 16px;
+    }
+    #hero-section .hero-information{
+        width: 100%;
+    }
+    #hero-section .hero-information h1{
+        font-size: 28px;
+    }
+    #hero-section .hero-information p{
+        font-size: 14px;
+    }
+}
+
+
+/* FOR EXTRA SMALL DEVICE  */
+@media only screen and (max-width: 400px){
+    #header{
+        top: 0;
+    }
+    #hero-section{
+        padding: 100px 1% 80px;
+    }
+    #hero-section .hero-information h1{
+        font-size: 20px;
+    }
+    #hero-section .hero-information p{
+        font-size: 12px;
     }
 }
