@@ -27,6 +27,8 @@
 /* Small devices (portrait tablets and large phones, 768px and Down)*/
 
 @media only screen and (max-width: 768px) {
+
+    /* MAIN-MENU RESPONSIVE SECTION START FROM HERE  */
     .main-menu{
         display: none;
     }
@@ -41,7 +43,7 @@
         right: 0 !important;
         background: black !important;
         padding: 0px 9% !important;
-        border-top: 1px solid white;
+        border-top: 1px solid white !important;
     }
     .menuActiveResponsive ul{
         display: block !important;
@@ -53,6 +55,12 @@
     .menuActiveResponsive ul li a{
         display: block !important;
     }
+    .menuActiveResponsive ul li a::after{
+        width: 100% !important;
+        height: 2px !important;
+    }
+    /* MAIN MENU RESPONSIVE SECTION END HERE */
+
 }
 
 
@@ -65,6 +73,7 @@
     .button{
         padding: 8px 16px;
     }
+    /* HERO SECTION RESPONSIVE START FROM HERE  */
     #hero-section .hero-information{
         width: 100%;
     }
@@ -74,6 +83,7 @@
     #hero-section .hero-information p{
         font-size: 14px;
     }
+    /* HERO SECTION RESPONSIVE END HERE */
 }
 
 

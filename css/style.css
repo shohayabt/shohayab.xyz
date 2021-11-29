@@ -184,3 +184,10 @@ section{
     text-transform: uppercase;
 }
 /* HERO SECTION END HERE */
+/* ABOUT SECTION START FORM HERE  */
+#about-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ABOUT SECTION END HERE */
