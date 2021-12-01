@@ -60,6 +60,28 @@
         height: 2px !important;
     }
     /* MAIN MENU RESPONSIVE SECTION END HERE */
+    /* ABOUT SECTION START FROM HERE  */
+    #about-section .flex{
+        flex-direction: column-reverse;
+    }
+    #skill{
+        width: 100%;
+    }
+    #about-section .personal-information{
+        width: 100%;
+    }
+    /* ABOUT SECTION END HERE */
+    /* SERVICE SECTION START HERE */
+    #service-section .card-container{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      #service-section .card-container .card{
+          width: 80%;
+          margin: 10px 0px;
+      }
+    /* SERVICE SECTION END HERE */
 
 }
 
@@ -100,5 +122,8 @@
     }
     #hero-section .hero-information p{
         font-size: 12px;
+    }
+    .motivation p{
+        font-size: 14px;
     }
 }

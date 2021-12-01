@@ -9,6 +9,18 @@ html{
     scroll-behavior: smooth;
     font-family: var(--headlineText);
 }
+/* SOME USEFUL VAR IN CSS STRT FORM HERE  */
+:root{
+    --mainColor:#e23e38;
+    --black:black;
+    --buttonColor:#e23e38;
+    --shadow:rgba(0, 0, 0, 0.6);
+    --white:white;
+    /* FONT ROOT CSS START HERE */
+    --headlineText:'Oswald', sans-serif;
+    --articleText:'Poppins', sans-serif;
+    /* FONT ROOT CSS END HERE */
+}
 a,a:hover{
     color: black;
     text-decoration: none;
@@ -40,17 +52,23 @@ section{
     border-radius: 0px;
     color: var(--white);
 }
-/* SOME USEFUL VAR IN CSS STRT FORM HERE  */
-:root{
-    --mainColor:#e23e38;
-    --black:black;
-    --buttonColor:#e23e38;
-    --shadow:rgba(0, 0, 0, 0.6);
-    --white:white;
-    /* FONT ROOT CSS START HERE */
-    --headlineText:'Oswald', sans-serif;
-    --articleText:'Poppins', sans-serif;
-    /* FONT ROOT CSS END HERE */
+.headline{
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--black);
+    margin: 10px 0px;
+}
+.subHeadline{
+    padding: 10px 5px;
+    background: var(--mainColor);
+    border-left: 5px solid var(--black);
+    margin: 10px 0px;
+}
+section .flex{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 0px 0px;
 }
 /* COMMON CSS END HERE */
 
@@ -185,9 +203,243 @@ section{
 }
 /* HERO SECTION END HERE */
 /* ABOUT SECTION START FORM HERE  */
-#about-section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+                    /* PROGRESS BAR CSS FROM INTERNET   https://www.codingnepalweb.com/ */
+                    #skill{
+                        width: 45%;
+                    }
+                    .skill-bars{
+                        padding: 0px 30px 0px 0px;
+                        width: 100%;
+                        background: #fff;
+                        border-radius: 10px;
+                      }
+                      .skill-bars .bar{
+                        margin: 20px 0;
+                      }
+                      .skill-bars .bar:first-child{
+                        margin-top: 0px;
+                      }
+                      .skill-bars .bar .info{
+                        margin-bottom: 5px;
+                      }
+                      .skill-bars .bar .info span{
+                        font-weight: 500;
+                        font-size: 17px;
+                        opacity: 0;
+                        animation: showText 0.5s 3s linear forwards;
+                      }
+                      @keyframes showText {
+                        100%{
+                          opacity: 1;
+                        }
+                      }
+                      .skill-bars .bar .progress-line{
+                        height: 4px;
+                        width: 100%;
+                        background: #f0f0f0;
+                        position: relative;
+                        transform: scaleX(0);
+                        transform-origin: left;
+                        border-radius: 10px;
+                        box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
+                                    0 1px rgba(255,255,255,0.8);
+                        animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+                      }
+                      @keyframes animate {
+                        100%{
+                          transform: scaleX(1);
+                        }
+                      }
+                      .bar .progress-line span{
+                        height: 100%;
+                        position: absolute;
+                        border-radius: 10px;
+                        transform: scaleX(0);
+                        transform-origin: left;
+                        background: var(--mainColor);
+                        animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+                      }
+                      .bar .progress-line.html span{
+                        width: 90%;
+                      }
+                      .bar .progress-line.css span{
+                        width: 80%;
+                      }
+                      .bar .progress-line.jquery span{
+                        width: 65%;
+                      }
+                      .bar .progress-line.javaScript span{
+                        width: 10%;
+                      }
+                      .bar .progress-line.sass span{
+                        width: 70%;
+                      }
+                      .progress-line span::before{
+                        position: absolute;
+                        content: "";
+                        top: -10px;
+                        right: 0;
+                        height: 0;
+                        width: 0;
+                        border: 7px solid transparent;
+                        border-bottom-width: 0px;
+                        border-right-width: 0px;
+                        border-top-color: #000;
+                        opacity: 0;
+                        animation: showText2 0.5s 1.5s linear forwards;
+                      }
+                      .progress-line span::after{
+                        position: absolute;
+                        top: -28px;
+                        right: 0;
+                        font-weight: 500;
+                        background: #000;
+                        color: #fff;
+                        padding: 1px 8px;
+                        font-size: 12px;
+                        border-radius: 3px;
+                        opacity: 0;
+                        animation: showText2 0.5s 1.5s linear forwards;
+                      }
+                      @keyframes showText2 {
+                        100%{
+                          opacity: 1;
+                        }
+                      }
+                      .progress-line.html span::after{
+                        content: "90%";
+                      }
+                      .progress-line.css span::after{
+                        content: "80%";
+                      }
+                      .progress-line.jquery span::after{
+                        content: "65%";
+                      }
+                      .progress-line.javaScript span::after{
+                        content: "10%";
+                      }
+                      .progress-line.sass span::after{
+                        content: "70%";
+                      }
+                    /* PROGRESS BAR CSS FROM INTERNET */
+#about-section .personal-information{
+    width: 50%;
+}
+#about-section .personal-information p{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--articleText);
+    text-transform: uppercase;
+    color: var(--shadow);
+}
+#about-section .personal-information h3{
+    color: var(--white);
+}
+#about-section .personal-information ul{
+    width: 100%;
+}
+#about-section .personal-information ul li{
+    display: block;
+    margin: 9px 0px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--articleText);
+}
+#about-section .personal-information ul li i{
+    margin-right: 5px;
+    font-size: 20px;
+    color: var(--black);
 }
 /* ABOUT SECTION END HERE */
+/* MOTIVATIONAL SECTION START FROM HERE  */
+.motivation{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../images/background-image-00.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 1;
+}
+.motivation::after{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--shadow);
+  z-index: -1;
+}
+.motivation p{
+  color: var(--white);
+  font-size: 18px;
+  font-family: var(--headlineText);
+  font-weight: 700;
+}
+/* MOTIVATIONAL SECTION END HERE */
+/* SERVICE SECTION START FROM HERE  */
+#service-section{
+  flex-direction: column;
+}
+#service-section .headline{
+  text-align: center;
+}
+#service-section .card-container{
+  justify-content: space-between;
+}
+#service-section .card-container .card{
+  width: 32%;
+}
+#service-section .card-container .card h4{
+  padding: 10px 0px;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: var(--headlineText);
+  background: var(--mainColor);
+  text-align: center;
+  transition: all linear 0.4s;
+  color: white;
+}
+#service-section .card-container .card ul{
+  width: 100%;
+  padding: 10px 0px;
+  text-align: center;
+  font-weight: 400;
+  font-family: var(--articleText);
+  font-size: 14px;
+  background: moccasin;
+  margin: 10px 0px;
+  border: 1px solid var(--black);
+  border-radius: 60px 60px 60px 60px / 70px 10px 70px 10px ;
+  transition: all linear 0.3s;
+}
+#service-section .card-container .card:hover ul{
+  border-radius: 0px;
+  margin: 0px;
+}
+#service-section .card-container .card ul li{
+margin: 5px 0px;
+text-transform: uppercase;
+}
+#service-section .card-container .card ul li i{
+  color: rgb(0, 224, 0);
+  margin: 0px 5px;
+  transition: all linear 0.3s;
+}
+#service-section .card-container .card:hover ul li i{
+  color: var(--mainColor);
+}
+#service-section .card-container .card a{
+  display: block;
+  padding: 5px 0px;
+  text-align: center;
+  background:var(--mainColor);
+  text-transform: uppercase;
+  transition: all linear 0.3s;
+  color: white;
+}
+/* SERVICE SECTION END HERE */
