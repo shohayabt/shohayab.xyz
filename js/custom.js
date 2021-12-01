@@ -10,15 +10,14 @@ var mainMenu = document.querySelector('.main-menu');
 
 
 // MAIN-MENU FIXING START FORM HERE const header = document.getElementById("header");
-window.addEventListener('scroll',function(){
+window.addEventListener('scroll', function () {
     navBar.classList.remove('color'); // CHANGE THE COLOR OF THE NAV BUTTON ON SCROLL
     mainMenu.classList.remove('menuActiveResponsive'); //REMOVE NAV ITEMS ON SCROLL
     var scrolling = document.documentElement.scrollTop;
-    if(scrolling>30)
-    {
+    if (scrolling > 30) {
         header.classList.add("headerActiveTop");
     }
-    else{
+    else {
         header.classList.remove("headerActiveTop");
     }
 })
@@ -26,9 +25,9 @@ window.addEventListener('scroll',function(){
 
 // RESPONSIVE MENU JAVASCRIPT START FORM HERE 
 
-navBar.addEventListener('click',function(){
-    setTimeout(function(){
+navBar.addEventListener('click', function () {
+    setTimeout(function () {
         navBar.classList.toggle('color');
         mainMenu.classList.toggle('menuActiveResponsive');
-    },200)
+    }, 200)
 })

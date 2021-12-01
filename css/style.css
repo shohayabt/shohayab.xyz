@@ -1,358 +1,423 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Poppins&display=swap');
+
 /* COMMON CSS START FROM HERE  */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html{
-    scroll-behavior: smooth;
-    font-family: var(--headlineText);
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--headlineText);
 }
+
 /* SOME USEFUL VAR IN CSS STRT FORM HERE  */
-:root{
-    --mainColor:#e23e38;
-    --black:black;
-    --buttonColor:#e23e38;
-    --shadow:rgba(0, 0, 0, 0.6);
-    --white:white;
-    /* FONT ROOT CSS START HERE */
-    --headlineText:'Oswald', sans-serif;
-    --articleText:'Poppins', sans-serif;
-    /* FONT ROOT CSS END HERE */
+:root {
+  --mainColor: #e23e38;
+  --black: black;
+  --buttonColor: #e23e38;
+  --shadow: rgba(0, 0, 0, 0.6);
+  --white: white;
+  /* FONT ROOT CSS START HERE */
+  --headlineText: 'Oswald', sans-serif;
+  --articleText: 'Poppins', sans-serif;
+  /* FONT ROOT CSS END HERE */
 }
-a,a:hover{
-    color: black;
-    text-decoration: none;
-    text-transform: uppercase;
+
+a,
+a:hover {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
 }
-ul,ol{
-    list-style: none;
+
+ul,
+ol {
+  list-style: none;
 }
-h1,h2{
-    text-transform: uppercase;
+
+h1,
+h2 {
+  text-transform: uppercase;
 }
-section{
-    padding: 40px 9%;
+
+section {
+  padding: 40px 9%;
 }
-.button{
-    background-color: var(--buttonColor);
-    padding: 10px 20px;
-    border-radius: 5px;
-    outline: 0;
-    border: 2px solid var(--buttonColor);
-    color: var(--white);
-    font-family: var(--headlineText);
-    margin: 10px 0px;
-    transition: all linear 0.2s;
+
+.button {
+  background-color: var(--buttonColor);
+  padding: 10px 20px;
+  border-radius: 5px;
+  outline: 0;
+  border: 2px solid var(--buttonColor);
+  color: var(--white);
+  font-family: var(--headlineText);
+  margin: 10px 0px;
+  transition: all linear 0.2s;
 }
-.button:hover{
-    background: transparent;
-    border: 2px solid var(--white);
-    border-radius: 0px;
-    color: var(--white);
+
+.button:hover {
+  background: transparent;
+  border: 2px solid var(--white);
+  border-radius: 0px;
+  color: var(--white);
 }
-.headline{
-    font-size: 36px;
-    font-weight: 700;
-    color: var(--black);
-    margin: 10px 0px;
+
+.headline {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--black);
+  margin: 10px 0px;
 }
-.subHeadline{
-    padding: 10px 5px;
-    background: var(--mainColor);
-    border-left: 5px solid var(--black);
-    margin: 10px 0px;
+
+.subHeadline {
+  padding: 10px 5px;
+  background: var(--mainColor);
+  border-left: 5px solid var(--black);
+  margin: 10px 0px;
 }
-section .flex{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 20px 0px 0px;
+
+section .flex {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 0px 0px;
 }
+
 /* COMMON CSS END HERE */
 
 /* HEADER SECTION START FROM HERE  */
-#header{
-    width: 100%;
-    height: 60px;
-    padding: 0px 9%;
-    position: absolute;
-    top: 30px;
-    background: var(--shadow);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 9999;
+#header {
+  width: 100%;
+  height: 60px;
+  padding: 0px 9%;
+  position: absolute;
+  top: 30px;
+  background: var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
 }
-.headerActiveTop{
-    position: fixed !important;
-    top: 0 !important;
-    background: var(--black) !important;
+
+.headerActiveTop {
+  position: fixed !important;
+  top: 0 !important;
+  background: var(--black) !important;
 }
-#header .logo{
-    font-size: 30px;
-    font-weight: 700;
-    font-family: var(--headlineText);
-    color: var(--white);
-    text-transform: uppercase;
+
+#header .logo {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: var(--headlineText);
+  color: var(--white);
+  text-transform: uppercase;
 }
-#header .logo i{
-    color: var(--white);
-    margin: 0px 6px;
+
+#header .logo i {
+  color: var(--white);
+  margin: 0px 6px;
 }
-#header .logo span{
-    color: var(--mainColor) !important;
+
+#header .logo span {
+  color: var(--mainColor) !important;
 }
-#header .main-menu ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+#header .main-menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#header .main-menu ul li{
-    line-height: 60px;
+
+#header .main-menu ul li {
+  line-height: 60px;
 }
-#header .main-menu ul li a{
-    display: inline-block;
-    font-size: 16px;
-    font-weight: 400;
-    font-family: var(--headlineText);
-    color: var(--white);
-    position: relative;
-    padding: 0px 20px;
+
+#header .main-menu ul li a {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: var(--headlineText);
+  color: var(--white);
+  position: relative;
+  padding: 0px 20px;
 }
-#header .main-menu ul li a::after{
-    position: absolute;
-    content: '';
-    background: var(--mainColor);
-    left:0;
-    bottom: 0;
-    height: 3px;
-    width: 0px;
-    transition: all linear 0.3s;
+
+#header .main-menu ul li a::after {
+  position: absolute;
+  content: '';
+  background: var(--mainColor);
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0px;
+  transition: all linear 0.3s;
 }
-#header .main-menu li:hover a{
-    background: var(--white);
-    color: var(--black);
+
+#header .main-menu li:hover a {
+  background: var(--white);
+  color: var(--black);
 }
-#header .main-menu li:hover a::after{
-    width: 100%;
+
+#header .main-menu li:hover a::after {
+  width: 100%;
 }
+
 #nav-bar {
-    padding: 2px;
-    cursor: pointer;
-    display: none;
+  padding: 2px;
+  cursor: pointer;
+  display: none;
 }
-.color i{
-    color: var(--mainColor) !important;
+
+.color i {
+  color: var(--mainColor) !important;
 }
-#nav-bar i{
-    font-size: 28px;
-    color: white;
+
+#nav-bar i {
+  font-size: 28px;
+  color: white;
 }
+
 /* HEADER SECTION END HERE  */
 /* HERO SECTION START FROM HERE  */
-#hero-section{
-    padding: 280px 9% 150px;
-    background: url(../images/background-image-00.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-attachment: fixed;
-    position: relative;
-    z-index: 1;
+#hero-section {
+  padding: 280px 9% 150px;
+  background: url(../images/background-image-00.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 1;
 }
-#hero-section::after{
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--shadow);
-    z-index: -1;
+
+#hero-section::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--shadow);
+  z-index: -1;
 }
-#hero-section .hero-information{
-    width: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+
+#hero-section .hero-information {
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-#hero-section .hero-information h2{
-    font-family: var(--headlineText);
-    font-size: 20px;
-    color: var(--white);
+
+#hero-section .hero-information h2 {
+  font-family: var(--headlineText);
+  font-size: 20px;
+  color: var(--white);
 }
-#hero-section .hero-information h1{
-    font-size: 40px;
-    color: var(--mainColor);
-    font-family: var(--headlineText);
-    font-weight: 700;
+
+#hero-section .hero-information h1 {
+  font-size: 40px;
+  color: var(--mainColor);
+  font-family: var(--headlineText);
+  font-weight: 700;
 }
-#hero-section .hero-information p{
-    color: var(--white);
-    font-size: 16px;
-    font-weight: 400;
-    font-family: var(--articleText);
-    text-align: center;
-    text-transform: uppercase;
+
+#hero-section .hero-information p {
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 400;
+  font-family: var(--articleText);
+  text-align: center;
+  text-transform: uppercase;
 }
+
 /* HERO SECTION END HERE */
 /* ABOUT SECTION START FORM HERE  */
-                    /* PROGRESS BAR CSS FROM INTERNET   https://www.codingnepalweb.com/ */
-                    #skill{
-                        width: 45%;
-                    }
-                    .skill-bars{
-                        padding: 0px 30px 0px 0px;
-                        width: 100%;
-                        background: #fff;
-                        border-radius: 10px;
-                      }
-                      .skill-bars .bar{
-                        margin: 20px 0;
-                      }
-                      .skill-bars .bar:first-child{
-                        margin-top: 0px;
-                      }
-                      .skill-bars .bar .info{
-                        margin-bottom: 5px;
-                      }
-                      .skill-bars .bar .info span{
-                        font-weight: 500;
-                        font-size: 17px;
-                        opacity: 0;
-                        animation: showText 0.5s 3s linear forwards;
-                      }
-                      @keyframes showText {
-                        100%{
-                          opacity: 1;
-                        }
-                      }
-                      .skill-bars .bar .progress-line{
-                        height: 4px;
-                        width: 100%;
-                        background: #f0f0f0;
-                        position: relative;
-                        transform: scaleX(0);
-                        transform-origin: left;
-                        border-radius: 10px;
-                        box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
-                                    0 1px rgba(255,255,255,0.8);
-                        animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
-                      }
-                      @keyframes animate {
-                        100%{
-                          transform: scaleX(1);
-                        }
-                      }
-                      .bar .progress-line span{
-                        height: 100%;
-                        position: absolute;
-                        border-radius: 10px;
-                        transform: scaleX(0);
-                        transform-origin: left;
-                        background: var(--mainColor);
-                        animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
-                      }
-                      .bar .progress-line.html span{
-                        width: 90%;
-                      }
-                      .bar .progress-line.css span{
-                        width: 80%;
-                      }
-                      .bar .progress-line.jquery span{
-                        width: 65%;
-                      }
-                      .bar .progress-line.javaScript span{
-                        width: 10%;
-                      }
-                      .bar .progress-line.sass span{
-                        width: 70%;
-                      }
-                      .progress-line span::before{
-                        position: absolute;
-                        content: "";
-                        top: -10px;
-                        right: 0;
-                        height: 0;
-                        width: 0;
-                        border: 7px solid transparent;
-                        border-bottom-width: 0px;
-                        border-right-width: 0px;
-                        border-top-color: #000;
-                        opacity: 0;
-                        animation: showText2 0.5s 1.5s linear forwards;
-                      }
-                      .progress-line span::after{
-                        position: absolute;
-                        top: -28px;
-                        right: 0;
-                        font-weight: 500;
-                        background: #000;
-                        color: #fff;
-                        padding: 1px 8px;
-                        font-size: 12px;
-                        border-radius: 3px;
-                        opacity: 0;
-                        animation: showText2 0.5s 1.5s linear forwards;
-                      }
-                      @keyframes showText2 {
-                        100%{
-                          opacity: 1;
-                        }
-                      }
-                      .progress-line.html span::after{
-                        content: "90%";
-                      }
-                      .progress-line.css span::after{
-                        content: "80%";
-                      }
-                      .progress-line.jquery span::after{
-                        content: "65%";
-                      }
-                      .progress-line.javaScript span::after{
-                        content: "10%";
-                      }
-                      .progress-line.sass span::after{
-                        content: "70%";
-                      }
-                    /* PROGRESS BAR CSS FROM INTERNET */
-#about-section .personal-information{
-    width: 50%;
+/* PROGRESS BAR CSS FROM INTERNET   https://www.codingnepalweb.com/ */
+#skill {
+  width: 45%;
 }
-#about-section .personal-information p{
-    font-size: 16px;
-    font-weight: 400;
-    font-family: var(--articleText);
-    text-transform: uppercase;
-    color: var(--shadow);
+
+.skill-bars {
+  padding: 0px 30px 0px 0px;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
 }
-#about-section .personal-information h3{
-    color: var(--white);
+
+.skill-bars .bar {
+  margin: 20px 0;
 }
-#about-section .personal-information ul{
-    width: 100%;
+
+.skill-bars .bar:first-child {
+  margin-top: 0px;
 }
-#about-section .personal-information ul li{
-    display: block;
-    margin: 9px 0px;
-    font-size: 16px;
-    font-weight: 400;
-    font-family: var(--articleText);
+
+.skill-bars .bar .info {
+  margin-bottom: 5px;
 }
-#about-section .personal-information ul li i{
-    margin-right: 5px;
-    font-size: 20px;
-    color: var(--black);
+
+.skill-bars .bar .info span {
+  font-weight: 500;
+  font-size: 17px;
+  opacity: 0;
+  animation: showText 0.5s 3s linear forwards;
 }
+
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+
+.skill-bars .bar .progress-line {
+  height: 4px;
+  width: 100%;
+  background: #f0f0f0;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05),
+    0 1px rgba(255, 255, 255, 0.8);
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.bar .progress-line span {
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: var(--mainColor);
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+.bar .progress-line.html span {
+  width: 90%;
+}
+
+.bar .progress-line.css span {
+  width: 80%;
+}
+
+.bar .progress-line.jquery span {
+  width: 65%;
+}
+
+.bar .progress-line.javaScript span {
+  width: 10%;
+}
+
+.bar .progress-line.sass span {
+  width: 70%;
+}
+
+.progress-line span::before {
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 0;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+
+.progress-line span::after {
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-weight: 500;
+  background: #000;
+  color: #fff;
+  padding: 1px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+
+@keyframes showText2 {
+  100% {
+    opacity: 1;
+  }
+}
+
+.progress-line.html span::after {
+  content: "90%";
+}
+
+.progress-line.css span::after {
+  content: "80%";
+}
+
+.progress-line.jquery span::after {
+  content: "65%";
+}
+
+.progress-line.javaScript span::after {
+  content: "10%";
+}
+
+.progress-line.sass span::after {
+  content: "70%";
+}
+
+/* PROGRESS BAR CSS FROM INTERNET */
+#about-section .personal-information {
+  width: 50%;
+}
+
+#about-section .personal-information p {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: var(--articleText);
+  text-transform: uppercase;
+  color: var(--shadow);
+}
+
+#about-section .personal-information h3 {
+  color: var(--white);
+}
+
+#about-section .personal-information ul {
+  width: 100%;
+}
+
+#about-section .personal-information ul li {
+  display: block;
+  margin: 10px 0px;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: var(--articleText);
+}
+
+#about-section .personal-information ul li i {
+  margin-right: 5px;
+  font-size: 16px;
+  color: var(--black);
+}
+
 /* ABOUT SECTION END HERE */
 /* MOTIVATIONAL SECTION START FROM HERE  */
-.motivation{
+.motivation {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -364,7 +429,8 @@ section .flex{
   position: relative;
   z-index: 1;
 }
-.motivation::after{
+
+.motivation::after {
   position: absolute;
   content: '';
   top: 0;
@@ -374,27 +440,33 @@ section .flex{
   background: var(--shadow);
   z-index: -1;
 }
-.motivation p{
+
+.motivation p {
   color: var(--white);
   font-size: 18px;
   font-family: var(--headlineText);
   font-weight: 700;
 }
+
 /* MOTIVATIONAL SECTION END HERE */
 /* SERVICE SECTION START FROM HERE  */
-#service-section{
+#service-section {
   flex-direction: column;
 }
-#service-section .headline{
+
+#service-section .headline {
   text-align: center;
 }
-#service-section .card-container{
+
+#service-section .card-container {
   justify-content: space-between;
 }
-#service-section .card-container .card{
+
+#service-section .card-container .card {
   width: 32%;
 }
-#service-section .card-container .card h4{
+
+#service-section .card-container .card h4 {
   padding: 10px 0px;
   font-size: 16px;
   font-weight: 700;
@@ -404,7 +476,8 @@ section .flex{
   transition: all linear 0.4s;
   color: white;
 }
-#service-section .card-container .card ul{
+
+#service-section .card-container .card ul {
   width: 100%;
   padding: 10px 0px;
   text-align: center;
@@ -414,32 +487,88 @@ section .flex{
   background: moccasin;
   margin: 10px 0px;
   border: 1px solid var(--black);
-  border-radius: 60px 60px 60px 60px / 70px 10px 70px 10px ;
+  border-radius: 60px 60px 60px 60px / 70px 10px 70px 10px;
   transition: all linear 0.3s;
 }
-#service-section .card-container .card:hover ul{
+
+#service-section .card-container .card:hover ul {
   border-radius: 0px;
   margin: 0px;
 }
-#service-section .card-container .card ul li{
-margin: 5px 0px;
-text-transform: uppercase;
+
+#service-section .card-container .card ul li {
+  margin: 5px 0px;
+  text-transform: uppercase;
 }
-#service-section .card-container .card ul li i{
+
+#service-section .card-container .card ul li i {
   color: rgb(0, 224, 0);
   margin: 0px 5px;
   transition: all linear 0.3s;
 }
-#service-section .card-container .card:hover ul li i{
+
+#service-section .card-container .card:hover ul li i {
   color: var(--mainColor);
 }
-#service-section .card-container .card a{
+
+#service-section .card-container .card a {
   display: block;
   padding: 5px 0px;
   text-align: center;
-  background:var(--mainColor);
+  background: var(--mainColor);
   text-transform: uppercase;
   transition: all linear 0.3s;
   color: white;
 }
+
 /* SERVICE SECTION END HERE */
+
+/* CONTACT SECTION START FORM HERE */
+#contact-section .headline {
+  text-align: center;
+}
+
+#contact-section .flex .message {
+  width: 60%;
+  padding: 0px 30px 0px 0px;
+}
+
+#contact-section .flex .message label h3 {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: var(--articleText);
+  margin: 5px 0px;
+  text-transform: uppercase;
+}
+
+#contact-section .flex .message input,
+#contact-section .flex .message textarea {
+  width: 90%;
+  padding: 10px 5px;
+  font-family: var(--articleText);
+}
+
+#contact-section .flex .message a {
+  display: inline-block;
+}
+
+#contact-section .flex .message a:hover {
+  background-color: var(--buttonColor);
+  padding: 10px 20px;
+  border-radius: 5px;
+  outline: 0;
+  border: 2px solid var(--buttonColor);
+  color: var(--white);
+  font-family: var(--headlineText);
+  margin: 10px 0px;
+}
+
+#contact-section .flex .image {
+  width: 40%;
+}
+
+#contact-section .flex .image img {
+  width: 100%;
+}
+
+/* CONTACT SECTION END HERE  */
