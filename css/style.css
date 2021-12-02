@@ -86,6 +86,24 @@ section .flex {
   padding: 20px 0px 0px;
 }
 
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: var(--headlineText);
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.logo i {
+  color: var(--white);
+
+  margin: 0px 6px;
+}
+
+.logo span {
+  color: var(--mainColor) !important;
+}
+
 /* COMMON CSS END HERE */
 
 /* HEADER SECTION START FROM HERE  */
@@ -446,6 +464,7 @@ section .flex {
   font-size: 18px;
   font-family: var(--headlineText);
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 /* MOTIVATIONAL SECTION END HERE */
@@ -572,3 +591,56 @@ section .flex {
 }
 
 /* CONTACT SECTION END HERE  */
+/* FOOTER SECTION START FROM HERE  */
+#footer {
+  background: url(../images/background-image-00.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+#footer::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--shadow);
+  z-index: -1;
+}
+
+#footer .footer-logo {
+  padding: 20px 9%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid var(--white);
+}
+
+#footer .footer-text {
+  padding: 10px 9%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer .footer-text p {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: var(--headlineText);
+  color: var(--white);
+}
+
+#footer .footer-text p i {
+  color: var(--mainColor);
+  margin: 0px 5px;
+}
+
+#footer .footer-text p a {
+  color: var(--mainColor);
+}
+
+/* FOOTER SECTION END HERE */

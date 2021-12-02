@@ -183,4 +183,11 @@
     .motivation p {
         font-size: 14px;
     }
+    #footer .footer-text,#footer footer-logo{
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+    #footer .footer-text p {
+        font-size: 14px;
+      }
 }
